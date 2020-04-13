@@ -1,6 +1,7 @@
 modulo1/.vscode
+modulo2/.vscode
 conf.cnf
-modulo1/.idea/
+
 .DS_Store
 
 # Created by https://www.gitignore.io/api/django
