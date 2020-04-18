@@ -74,10 +74,10 @@ class CursoSerializer(serializers.ModelSerializer):
     # OBS: Dependendo do tamanho dos dados pode ser recomendado fazer um campo no model
     # e seta-los com um signals no lugar desse procedimento usando MethodField
     def get_media_avaliacoes(self, obj):
-         # Funçao Avg calcula os retornos do relacionamento do campo curso no model Avaliacoes e
-         # retornar o total pela função get
-         media = obj.avaliacoes.aggregate(Avg('avaliacao')).get('avaliacao__avg')
-    
+        # Funçao Avg calcula os retornos do relacionamento do campo curso no model Avaliacoes e
+        # retornar o total pela função get
+        media = obj.avaliacoes.aggregate(Avg('avaliacao')).get('avaliacao__avg')
+
         if media is None:
             return 0
         return round(media * 2) / 2
